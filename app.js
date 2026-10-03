@@ -1,7 +1,6 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { SUPABASE_URL, SUPABASE_ANON_KEY, ADMIN_EMAIL } from './config.js';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], BUCKET='student-documents', MAX=10*1024*1024;
-const ADMIN_EMAIL='katthepremkumar@gmail.com';
 let db,user,profile={},docs=[],adminUsers=[];
 function msg(s){$('#toast').textContent=s;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2600)}
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
